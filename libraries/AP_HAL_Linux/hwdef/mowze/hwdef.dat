@@ -1,0 +1,12 @@
+# The Mowze Implementation of Ardupilot for raspberry pi
+
+
+define CONFIG_HAL_BOARD_SUBTYPE HAL_BOARD_SUBTYPE_LINUX_MOWZE
+env TOOLCHAIN aarch64-linux-gnu
+env OPTIMIZE -fomit-frame-pointer -ftree-vectorize
+
+# Define the directories
+define HAL_BOARD_LOG_DIRECTORY "logs"
+define HAL_BOARD_TERRAIN_DIRECTORY "terrain"
+define HAL_BOARD_STORAGE_DIRECTORY "."
+define HAL_INS_DEFAULT HAL_INS_NONE
